@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
-from flask_mysqldb import MySQL
+#from flask_mysqldb import MySQL
 
 app=Flask(__name__)
 
@@ -9,7 +9,7 @@ app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = '2399'
 app.config['MYSQL_DB'] = 'abaco'
 
-conexion = MySQL(app)
+#conexion = MySQL(app)
 
 
 @app.before_request
@@ -73,10 +73,6 @@ def pagina_no_encontrada(error):
 if __name__=='__main__':
     app.add_url_rule('/query_string',view_func=query_string)
     app.register_error_handler(404,pagina_no_encontrada)
-<<<<<<< HEAD
     
     app.run(debug=True,port=5000)
 
-=======
-    app.run(debug=True,port=5000)
->>>>>>> 872768c (practica flask)
