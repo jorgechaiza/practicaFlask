@@ -73,6 +73,10 @@ def pagina_no_encontrada(error):
 if __name__=='__main__':
     app.add_url_rule('/query_string',view_func=query_string)
     app.register_error_handler(404,pagina_no_encontrada)
+<<<<<<< HEAD
     
     app.run(debug=True,port=5000)
 
+=======
+    app.run(debug=True,port=5000)
+>>>>>>> 872768c (practica flask)
